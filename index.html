@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TaskFlow - a simple, responsive task manager for students.">
+  <title>TaskFlow - Student Task Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#10003;</span> TaskFlow</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tasks.html">My Tasks</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="themeToggle" class="btn btn-outline btn-small">Dark</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">Student Task Manager</p>
+        <h1>Plan your day.<br><span class="highlight">Finish what matters.</span></h1>
+        <p class="lead">TaskFlow helps you add, organize and track your assignments, projects and meetings in one clean, responsive web app that works on every device.</p>
+        <div class="hero-actions">
+          <a href="tasks.html" class="btn btn-primary">Open My Tasks</a>
+          <a href="#features" class="btn btn-outline">Explore Features</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <h3>Today's Focus</h3>
+        <ul>
+          <li><span class="dot high"></span> Complete HTML &amp; CSS assignment</li>
+          <li><span class="dot medium"></span> Revise JavaScript DOM concepts</li>
+          <li><span class="dot low"></span> Push project to GitHub</li>
+        </ul>
+        <div class="progress"><div class="progress-bar" style="width:66%"></div></div>
+        <p class="muted small">2 of 3 tasks completed</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="stats" id="stats">
+        <div class="stat"><span class="stat-number" data-stat="total">0</span><span class="stat-label">Total Tasks</span></div>
+        <div class="stat"><span class="stat-number" data-stat="completed">0</span><span class="stat-label">Completed</span></div>
+        <div class="stat"><span class="stat-number" data-stat="pending">0</span><span class="stat-label">Pending</span></div>
+        <div class="stat"><span class="stat-number" data-stat="high">0</span><span class="stat-label">High Priority</span></div>
+      </div>
+    </section>
+
+    <section class="container section" id="features">
+      <h2 class="section-title">Everything you need to stay organized</h2>
+      <div class="features">
+        <article class="card feature">
+          <h3>Add &amp; Manage Tasks</h3>
+          <p>Create tasks with a title, due date, category and priority. Edit or delete them any time.</p>
+        </article>
+        <article class="card feature">
+          <h3>Smart Filters &amp; Search</h3>
+          <p>Filter by status or priority, search by keyword and sort by due date to find tasks instantly.</p>
+        </article>
+        <article class="card feature">
+          <h3>Works on Every Device</h3>
+          <p>A responsive layout built with Flexbox, Grid and media queries adapts to desktop, tablet and mobile.</p>
+        </article>
+        <article class="card feature">
+          <h3>Saved in Your Browser</h3>
+          <p>Tasks are stored using the browser's localStorage, so your list is still there when you return.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 TaskFlow. Built with HTML, CSS and JavaScript during the Web Development internship at Reccsar Pvt Ltd.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

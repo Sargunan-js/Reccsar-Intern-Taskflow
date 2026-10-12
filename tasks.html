@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tasks - TaskFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tasks">
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="brand"><span class="brand-mark">&#10003;</span> TaskFlow</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tasks.html" class="active">My Tasks</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="themeToggle" class="btn btn-outline btn-small">Dark</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1 class="page-title">My Tasks</h1>
+    <div class="layout">
+      <aside class="card form-card">
+        <h2 id="formHeading">Add a New Task</h2>
+        <form id="taskForm" novalidate>
+          <div class="field">
+            <label for="title">Task title</label>
+            <input type="text" id="title" placeholder="e.g. Finish CSS assignment" maxlength="80">
+            <span class="error" id="titleError"></span>
+          </div>
+          <div class="field">
+            <label for="dueDate">Due date</label>
+            <input type="date" id="dueDate">
+            <span class="error" id="dueDateError"></span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="priority">Priority</label>
+              <select id="priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="category">Category</label>
+              <select id="category">
+                <option>Study</option>
+                <option>Project</option>
+                <option>Report</option>
+                <option>Meeting</option>
+                <option>Personal</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Add Task</button>
+            <button type="button" class="btn btn-outline" id="cancelEdit" hidden>Cancel</button>
+          </div>
+        </form>
+      </aside>
+
+      <section class="list-card">
+        <div class="toolbar card">
+          <input type="search" id="searchInput" placeholder="Search tasks...">
+          <div class="filters" id="statusFilters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="active">Active</button>
+            <button class="chip" data-filter="completed">Completed</button>
+          </div>
+          <select id="priorityFilter" aria-label="Filter by priority">
+            <option value="all">All priorities</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+        <p class="summary" id="summary"></p>
+        <ul class="task-list" id="taskList"></ul>
+        <p class="empty" id="emptyMessage" hidden>No tasks match your filters.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>&copy; 2026 TaskFlow. Built with HTML, CSS and JavaScript.</p></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
